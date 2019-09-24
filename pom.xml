@@ -15,7 +15,7 @@
         <dependency>
             <groupId>com.ebay.search.productivitytools</groupId>
             <artifactId>http-client-utils</artifactId>
-            <version>1.3-SNAPSHOT</version>
+            <version>1.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

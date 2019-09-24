@@ -101,4 +101,18 @@ public class TestUtils {
 
 
     }
+
+    public void deleteAd(int adid) throws Exception {
+        String requestUrl = CommonUtils.serverAddress + "/" + CommonUtils.EndPoints.deleteAd.getValue().replaceAll("\\{adid\\}", String.valueOf(adid));
+
+        System.out.println(requestUrl);
+
+        HttpClientUtils httpClientUtils = new HttpClientUtils();
+        HeaderUtils headerUtils = new HeaderUtils();
+        Map<String, String> defaultHeaders = headerUtils.getDefaultHeaders();
+        defaultHeaders.put("content-type", "application/json");
+        String response = httpClientUtils.delete(requestUrl, defaultHeaders, false);
+        Thread.sleep(100);
+        System.out.println("Response is " + response);
+    }
 }

@@ -13,5 +13,7 @@ public class RunAdServerTest {
         runTestUtil.registerClicks();
         for (int i = 0; i <= 10; i++)
             runTestUtil.getBestMatchAd();
+
+        runTestUtil.deleteAd(4);
     }
 }
