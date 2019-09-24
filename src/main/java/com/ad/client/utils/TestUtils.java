@@ -1,4 +1,4 @@
-package utils;
+package com.ad.client.utils;
 
 import com.ebay.search.ep.services.HeaderUtils;
 import com.ebay.search.ep.services.HttpClientUtils;
@@ -24,7 +24,7 @@ public class TestUtils {
                     "\"custName\": \"Ad " + adid + "\"," +
                     "\"email\": \"test@email.com\"," +
                     "\"sTime\": \"1000\"," +
-                    "\"catId\": \"" + random.nextInt(4) + 1 + "\"" +
+                    "\"catId\": \"" + (random.nextInt(4) + 1) + "\"" +
                     "}";
 
             System.out.println("Creating Ad " + content);
@@ -48,7 +48,7 @@ public class TestUtils {
         for (Map.Entry<Integer, Integer> spec : impressionTestSpec.entrySet()) {
             for (int i = 1; i <= spec.getValue(); i++) {
                 String content = "{" +
-                        "\"catId\": \"" + random.nextInt(4) + 1 + "\"," +
+                        "\"catId\": \"" + (random.nextInt(4) + 1) + "\"," +
                         "\"adId\": \"" + spec.getKey() + "\"," +
                         "\"rLogId\":\"123213\" " +
                         "}";
@@ -75,7 +75,7 @@ public class TestUtils {
         for (Map.Entry<Integer, Integer> spec : clickTestSpec.entrySet()) {
             for (int i = 1; i <= spec.getValue(); i++) {
                 String content = "{" +
-                        "\"catId\": \"" + random.nextInt(4) + 1 + "\"," +
+                        "\"catId\": \"" + (random.nextInt(4) + 1) + "\"," +
                         "\"adId\":\"" + spec.getKey() + "\"," +
                         "\"impressionId\":\"" + random.nextInt(CommonUtils.numOfTestAds) + "\"," + // randomly associating click with an ad.
                         "\"rLogId\":\"123213\" " +

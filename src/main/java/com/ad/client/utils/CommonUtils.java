@@ -1,4 +1,4 @@
-package utils;
+package com.ad.client.utils;
 
 import java.util.HashMap;
 

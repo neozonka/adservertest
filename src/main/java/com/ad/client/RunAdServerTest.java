@@ -1,4 +1,6 @@
-import utils.TestUtils;
+package com.ad.client;
+
+import com.ad.client.utils.TestUtils;
 
 public class RunAdServerTest {
 
